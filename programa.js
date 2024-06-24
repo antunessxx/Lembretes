@@ -41,3 +41,20 @@ switch (opcao) {
 		}
 	})
 }
+
+function listarLembretes() {
+
+    rl.question('Digite o nome do lembrete: ', (lembrete) => {
+    rl.question('Digite o dia : ', (dia) => {
+    rl.question('Digite se foi concluido: ', (concluido) =>{
+  
+        lembretes.push({ lembrete: lembrete, dia: dia, concluido: concluido})
+    
+    console.log('lembrete cadastrado com sucesso!')
+ 
+     exibirMenu()
+
+    })
+    })
+    })
+}
