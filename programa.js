@@ -5,7 +5,7 @@ const rl = readline.createInterface({
 	output: process.stdout
 })
 
-let Lembretes =[]
+let lembretes =[]
 exibirMenu()
 
 function exibirMenu() {
@@ -40,6 +40,23 @@ switch (opcao) {
 				break
 		}
 	})
+}
+
+function AdicionarLembretes() {
+
+    rl.question('Digite o nome do lembrete: ', (lembrete) => {
+    rl.question('Digite o dia: ', (dia) => {
+    rl.question('Digite se foi concluido: ', (concluido) =>{
+  
+        lembretes.push({ nome: nome, cantor: cantor, genero: genero})
+    
+    console.log('Lembretes cadastrada com sucesso!')
+ 
+     exibirMenu()
+
+    })
+    })
+    })
 }
 
 function listarLembretes() {
